@@ -291,7 +291,7 @@ aws cloudtrail lookup-events \
 ### Step 2: Isolate
 ```bash
 # Revoke all sessions for a user
-aws iam delete-access-key --access-key-id AKIAIOSFODNN7EXAMPLE --user-name BadUser
+aws iam delete-access-key " --user-name BadUser
 
 # Isolate a pod with network policy
 kubectl apply -f - <<EOF
